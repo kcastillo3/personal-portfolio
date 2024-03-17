@@ -58,7 +58,7 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio!</span>
                 <h1>{`Hi! I'm Kevin.`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Front-End Developer", "Back-End Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Bridging a solid foundation in retail management and technical recruitment, I am passionately pivoting into software development. My commitment to mastering full-stack development, has equipped me with a diverse set of technical skills. Driven by a people-first approach, I aim to merge my interpersonal strengths with technological innovation. My goal is to create intuitive and impactful software solutions, leveraging my background to make a meaningful contribution to the tech world. Let's connect and explore how we can innovate together.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => window.open('https://www.linkedin.com/in/kevin-castillo-a38a02218/', '_blank')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
