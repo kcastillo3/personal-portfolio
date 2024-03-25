@@ -2,6 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import teamifyImg from "../assets/img/Teamify.webp";
 import hitlistImg from "../assets/img/Hitlist.webp";
+import carcapsuleImg from "../assets/img/CarCapsule.webp"
 import museImg from "../assets/img/Muse.webp";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -27,6 +28,12 @@ export const Projects = () => {
       description: "Created with Python",
       imgUrl: teamifyImg,
       githubLink: "https://github.com/kcastillo3/Teamify-Phase3-Project",
+    },
+    {
+      title: "Car Capsule Museum",
+      description: "Created with Flask SQLAlchemy and React",
+      imgUrl: carcapsuleImg,
+      githubLink: "https://github.com/kcastillo3/phase-4-carcapsule-museum",
     },
   ];
 
@@ -82,7 +89,18 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      {/* Projects for full-stack will be displayed here when added */}
+                    <Row>
+                        {
+                          projects.filter(project => project.title === "Car Capsule Museum").map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                              />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
