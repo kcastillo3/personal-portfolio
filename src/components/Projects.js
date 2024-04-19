@@ -4,6 +4,8 @@ import teamifyImg from "../assets/img/Teamify.webp";
 import hitlistImg from "../assets/img/Hitlist.webp";
 import carcapsuleImg from "../assets/img/CarCapsule.webp"
 import museImg from "../assets/img/Muse.webp";
+import bembelogoImg from "../assets/img/bembelogo.webp";  
+import couchImg from "../assets/img/couch.webp";         
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -34,6 +36,18 @@ export const Projects = () => {
       description: "Created with Flask SQLAlchemy and React",
       imgUrl: carcapsuleImg,
       githubLink: "https://github.com/kcastillo3/phase-4-carcapsule-museum",
+    },
+    {
+      title: "Bembe",
+      description: "Created with Flask SQLAlchemy and React",
+      imgUrl: bembelogoImg,
+      githubLink: "https://github.com/jennyglitters/Bembe-Phase-4-Project",
+    },
+    {
+      title: "Curble",
+      description: "Created with Flask SQLAlchemy and React",
+      imgUrl: couchImg,
+      githubLink: "https://github.com/kcastillo3/Curble",
     },
   ];
 
@@ -91,7 +105,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="third">
                     <Row>
                         {
-                          projects.filter(project => project.title === "Car Capsule Museum").map((project, index) => {
+                          projects.filter(project => project.title === "Car Capsule Museum" || project.title === "Bembe" || project.title === "Curble").map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
